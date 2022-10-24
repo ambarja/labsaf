@@ -1,0 +1,19 @@
+.navbar-nav .nav-link {
+    color:#ffffff;
+}
+
+.navbar-dark input[type="search"] {
+    border-color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.template-home img.logo {
+    width: 180px;
+}
+
+img.logo {
+    float: right;
+    width: 180px;
+    margin-left: 30px;
+}
