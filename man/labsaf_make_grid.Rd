@@ -4,16 +4,22 @@
 \alias{labsaf_make_grid}
 \title{labsaf make grid}
 \usage{
-labsaf_make_grid(x, size)
+labsaf_make_grid(x, size, square = TRUE, ...)
 }
 \arguments{
-\item{x, }{is a sf object (polygon) that represent the study area.}
+\item{x, }{is as sf object of type polygon (\emph{UTM project}) that represent the study area.}
 
-\item{size, }{is the size of the pixel grid.}
+\item{size, }{is the size of the pixel grid in \strong{meters}.}
+
+\item{square, }{is logical; if \code{FALSE}, create \strong{hexagonal grid}.}
+
+\item{..., }{further arguments of \code{st_make_grid()} of the sf package.}
 }
 \value{
-a sf object (polygons).
+An sf object of type polygons.
 }
 \description{
-Is a function to create a grid of study area.
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
+
+This is a function to create a grid regular o hexagonal of the study area.
 }
