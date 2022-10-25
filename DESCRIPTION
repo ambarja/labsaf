@@ -2,13 +2,10 @@ Package: labsaf
 Type: Package
 Title: INIA
 Version: 0.1.0
-Authors@R: person(
-          "Antony",
-          "Barja",
-          role = c("aut", "cre"),
-          email = "antonymarcosbarja@gmail.com",
-          comment = c(ORCID = "0000-0001-5921-2858")
-          )
+Authors@R: c(
+      person("Antony","Barja",role = "aut",email = "antonymarcosbarja@gmail.com",comment = c(ORCID = "0000-0001-5921-2858")),
+      person("Carlos","Carbajal",role = "aut",email = "cmcarbajal@gmail.com",comment = c(ORCID = "0000-0002-1638-8076"))
+      )
 Maintainer: The package maintainer <antonymarcosbarja@gmail.com>
 Description: LABSAF is an R package under development that provides multiple functions for exploratory spatial soil analysis. It has multiple user-friendly functions for exploring the Earth Engine catalogue dataset using the `tidyverse` syntax derived from `tidyrgee` and `rgee`. Finally it has multiple functions for spatial exploratory graphics and also for mapping derived for `ggplot`, `sfmap` and `tidyterra`.
 License: MIT + file LICENSE
