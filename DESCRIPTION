@@ -14,7 +14,8 @@ LazyData: true
 Imports:
   sf,
   magrittr,
-  ggplot2
+  ggplot2,
+  ggspatial
 Suggests:
     lifecycle,
     testthat (>= 3.0.0)

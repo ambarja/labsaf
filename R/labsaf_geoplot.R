@@ -7,7 +7,7 @@
 #' @param region, is an sf object of type polygon that represent the study area.
 #' @param data, is an sf object with the values of the **soil properties**.
 #' @param var, represent the values of the soil properties.
-#' @param ..., further arguments of `labs` of the ggplot2 package.
+#' @param ..., further arguments of `labs` or `anotation_*` of the ggplot2 and ggspatial package.
 #' @return  A graphic of ggplot2.
 #' @export
 
@@ -25,6 +25,8 @@ labsaf_geoplot <- function(
       shape = 16,
       ggplot2::aes(color = data[[var]])
     ) +
-    ggplot2::labs(color = var,...)
+    ggplot2::labs(color = var,...) +
+    ggspatial::annotation_north_arrow(location="tl",...) +
+    ggspatial::annotation_scale(location="br",...)
   return(geomap)
 }

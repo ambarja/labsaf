@@ -13,7 +13,7 @@ labsaf_geoplot(region, data, var, ...)
 
 \item{var, }{represent the values of the soil properties.}
 
-\item{..., }{further arguments of \code{labs} of the ggplot2 package.}
+\item{..., }{further arguments of \code{labs} or \verb{anotation_*} of the ggplot2 and ggspatial package.}
 }
 \value{
 A graphic of ggplot2.
