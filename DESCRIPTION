@@ -15,7 +15,8 @@ Imports:
   sf,
   magrittr,
   ggplot2,
-  ggspatial
+  ggspatial,
+  patchwork
 Suggests:
     lifecycle,
     testthat (>= 3.0.0)
