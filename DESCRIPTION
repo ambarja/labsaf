@@ -13,7 +13,8 @@ Encoding: UTF-8
 LazyData: true
 Imports:
   sf,
-  magrittr
+  magrittr,
+  ggplot2
 Suggests:
     lifecycle,
     testthat (>= 3.0.0)
