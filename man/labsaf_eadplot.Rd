@@ -4,7 +4,7 @@
 \alias{labsaf_eadplot}
 \title{labsaf aed}
 \usage{
-labsaf_eadplot(data, var, fill)
+labsaf_eadplot(data, var, fill, mode = "plot")
 }
 \arguments{
 \item{data, }{is an sf or data.frame object with the values of the \strong{soil properties}.}
@@ -12,6 +12,8 @@ labsaf_eadplot(data, var, fill)
 \item{var, }{represent the values of the soil properties.}
 
 \item{fill, }{is a fill color hexadecimal for plot.}
+
+\item{mode, }{is the output mode static o view plot.}
 }
 \value{
 A graphic of ggplot2.

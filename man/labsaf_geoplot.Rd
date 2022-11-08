@@ -4,7 +4,7 @@
 \alias{labsaf_geoplot}
 \title{labsaf geoplot}
 \usage{
-labsaf_geoplot(region, data, var, ...)
+labsaf_geoplot(region, data, var, mode, ...)
 }
 \arguments{
 \item{region, }{is an sf object of type polygon that represent the study area.}
@@ -12,6 +12,8 @@ labsaf_geoplot(region, data, var, ...)
 \item{data, }{is an sf object with the values of the \strong{soil properties}.}
 
 \item{var, }{represent the values of the soil properties.}
+
+\item{mode, }{is the output mode static o view plot.}
 
 \item{..., }{further arguments of \code{labs} or \verb{anotation_*} of the ggplot2 and ggspatial package.}
 }

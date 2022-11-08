@@ -16,7 +16,10 @@ Imports:
   magrittr,
   ggplot2,
   ggspatial,
-  patchwork
+  patchwork,
+  rlang,
+  plotly,
+  leaflet
 Suggests:
     lifecycle,
     testthat (>= 3.0.0)
