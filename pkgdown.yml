@@ -2,7 +2,7 @@ pandoc: 2.19.2
 pkgdown: 2.0.6
 pkgdown_sha: ~
 articles: {}
-last_built: 2022-11-08T15:43Z
+last_built: 2022-11-08T16:58Z
 urls:
   reference: https://ambarja.github.io/labsaf/reference
   article: https://ambarja.github.io/labsaf/articles
