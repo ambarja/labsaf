@@ -10,11 +10,11 @@
 #' @param mode, is the output mode static o view plot.
 #' @param ..., further arguments of `labs` or `anotation_*` of the ggplot2 and ggspatial package.
 #' @importFrom rlang .data
-#' @return  A graphic of ggplot2.
+#' @return  A graphic of ggplot2 o leaflet.
 #' @export
 
-labsaf_geoplot <- function(region, data, var, mode,...){
-  if(mode=="plot"){
+labsaf_geoplot <- function(region, data, var, mode = "plot",...){
+  if(mode == "plot"){
     geomap <- ggplot2::ggplot() +
       ggplot2::geom_sf(
         data = region,
@@ -33,7 +33,7 @@ labsaf_geoplot <- function(region, data, var, mode,...){
 
   }else{
     pal <- leaflet::colorNumeric(palette = "viridis",domain = data[[var]])
-    geoplot <- leaflet::leaflet(data = region) %>%
+    geomap <- leaflet::leaflet(data = region) %>%
       leaflet::addProviderTiles(
         leaflet::providers$OpenStreetMap,
         group = "OpenStreetMap") %>%

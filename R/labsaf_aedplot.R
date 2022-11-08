@@ -10,7 +10,7 @@
 #' @param fill, is a fill color hexadecimal for plot.
 #' @import patchwork
 #' @importFrom rlang .data
-#' @return  A graphic of ggplot2.
+#' @return  A graphic of ggplot2 or plotly.
 #' @export
 
 labsaf_eadplot <- function(data, var, fill, mode = "plot"){

@@ -4,7 +4,7 @@
 \alias{labsaf_geoplot}
 \title{labsaf geoplot}
 \usage{
-labsaf_geoplot(region, data, var, mode, ...)
+labsaf_geoplot(region, data, var, mode = "plot", ...)
 }
 \arguments{
 \item{region, }{is an sf object of type polygon that represent the study area.}
