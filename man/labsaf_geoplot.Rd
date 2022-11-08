@@ -18,7 +18,7 @@ labsaf_geoplot(region, data, var, mode = "plot", ...)
 \item{..., }{further arguments of \code{labs} or \verb{anotation_*} of the ggplot2 and ggspatial package.}
 }
 \value{
-A graphic of ggplot2.
+A graphic of ggplot2 o leaflet.
 }
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}

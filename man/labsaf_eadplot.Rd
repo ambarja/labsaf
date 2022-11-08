@@ -4,7 +4,7 @@
 \alias{labsaf_eadplot}
 \title{labsaf aed}
 \usage{
-labsaf_eadplot(data, var, fill, mode = "plot")
+labsaf_eadplot(data, var, fill = "#69782e", mode = "plot")
 }
 \arguments{
 \item{data, }{is an sf or data.frame object with the values of the \strong{soil properties}.}
@@ -16,7 +16,7 @@ labsaf_eadplot(data, var, fill, mode = "plot")
 \item{mode, }{is the output mode static o view plot.}
 }
 \value{
-A graphic of ggplot2.
+A graphic of ggplot2 or plotly.
 }
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}

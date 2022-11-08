@@ -14,6 +14,7 @@
 #' @export
 
 labsaf_geoplot <- function(region, data, var, mode = "plot",...){
+  # Stactic plot
   if(mode == "plot"){
     geomap <- ggplot2::ggplot() +
       ggplot2::geom_sf(
@@ -30,8 +31,10 @@ labsaf_geoplot <- function(region, data, var, mode = "plot",...){
       ggplot2::labs(color = var,...) +
       ggspatial::annotation_north_arrow(location="tl",...) +
       ggspatial::annotation_scale(location="br",...)
+  }
 
-  }else{
+  # Interactive plot
+  if(mode=="view"){
     pal <- leaflet::colorNumeric(palette = "viridis",domain = data[[var]])
     geomap <- leaflet::leaflet(data = region) %>%
       leaflet::addProviderTiles(

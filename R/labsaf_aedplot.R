@@ -13,34 +13,61 @@
 #' @return  A graphic of ggplot2 or plotly.
 #' @export
 
-labsaf_eadplot <- function(data, var, fill, mode = "plot"){
+labsaf_eadplot <- function(data, var, fill = "#69782e", mode = "plot"){
+  # Histogram plot
   plot_hist <- ggplot2::ggplot(
     data = data,
     ggplot2::aes(x = .data[[var]])) +
-    ggplot2::geom_histogram(fill = "#69782e",bins = 9,alpha=0.7) +
+    ggplot2::geom_histogram(fill = "#69782e", bins = 9, alpha=0.7) +
     ggplot2::theme_minimal()
-
+  # Boxplot
   plot_boxplot <- ggplot2::ggplot(
     data = data,
     ggplot2::aes(x=var,y = .data[[var]])) +
     ggplot2::geom_boxplot(fill = "#69782e", alpha=0.7) +
     ggplot2::geom_jitter() +
     ggplot2::theme_minimal()
-
+  # Stactic plot
   if(mode == "plot"){
     plot_hist <- plot_hist +
-      ggplot2::labs(title = sprintf("Histogram of %s",var),x="",y="")
+      ggplot2::labs(
+        title = sprintf("Histogram of %s",var),
+        x="",
+        y=""
+        )
+
     plot_boxplot <- plot_boxplot +
-      ggplot2::labs(title = sprintf("Violin plot of %s",var),x="",y="")
+      ggplot2::labs(
+        title = sprintf("Violin plot of %s",var),
+        x="",
+        y=""
+        )
+
     panel_plot <- plot_hist | plot_boxplot
-  } else{
+  }
+  # Interactive plot
+  if(mode == "view") {
     plot_hist <- plot_hist %>% plotly::ggplotly()
     plot_boxplot <- plot_boxplot %>% plotly::ggplotly()
-    panel_plot <- plotly::subplot(plot_hist,plot_boxplot) %>%
+    panel_plot <- plotly::subplot(plot_hist, plot_boxplot) %>%
       plotly::layout(
         annotations = list(
-          list(x = 0.2 , y = 1.05, text = sprintf("Histogram of %s",var), showarrow = F, xref='paper', yref='paper'),
-          list(x = 0.8 , y = 1.05, text = sprintf("Violin plot of %s",var), showarrow = F, xref='paper', yref='paper'))
+          list(
+            x = 0.2,
+            y = 1.05,
+            text = sprintf("Histogram of %s",var),
+            showarrow = F,
+            xref='paper',
+            yref='paper'
+            ),
+          list(
+            x = 0.8,
+            y = 1.05,
+            text = sprintf("Violin plot of %s",var),
+            showarrow = F,
+            xref='paper',
+            yref='paper')
+          )
         )
   }
   return(panel_plot)
