@@ -7,7 +7,7 @@
 labsaf_make_grid(x, size, square = TRUE, ...)
 }
 \arguments{
-\item{x, }{is as sf object of type polygon (\emph{UTM project}) that represent the study area.}
+\item{x, }{is an sf object of type polygon (\emph{UTM project}) that represent the study area.}
 
 \item{size, }{is the size of the pixel grid in \strong{meters}.}
 

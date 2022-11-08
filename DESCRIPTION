@@ -19,7 +19,8 @@ Imports:
   patchwork,
   rlang,
   plotly,
-  leaflet
+  leaflet,
+  crayon
 Suggests:
     lifecycle,
     testthat (>= 3.0.0)
