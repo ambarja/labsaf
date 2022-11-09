@@ -4,7 +4,7 @@
 \alias{labsaf_eadplot}
 \title{labsaf aed}
 \usage{
-labsaf_eadplot(data, var, fill = "#69782e", mode = "plot")
+labsaf_eadplot(data, var, fill = "#292da3", mode = "plot")
 }
 \arguments{
 \item{data, }{is an sf or data.frame object with the values of the \strong{soil properties}.}

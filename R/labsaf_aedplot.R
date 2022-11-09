@@ -13,20 +13,30 @@
 #' @return  A graphic of ggplot2 or plotly.
 #' @export
 
-labsaf_eadplot <- function(data, var, fill = "#69782e", mode = "plot"){
+labsaf_eadplot <- function(data, var, fill = "#292da3", mode = "plot"){
   # Histogram plot
   plot_hist <- ggplot2::ggplot(
     data = data,
     ggplot2::aes(x = .data[[var]])) +
-    ggplot2::geom_histogram(fill = "#69782e", bins = 9, alpha=0.7) +
+    ggplot2::geom_histogram(fill = "#292da3", bins = 9, alpha=0.9, color = "white",lwd =0.1) +
     ggplot2::theme_minimal()
-  # Boxplot
+  # Violin plot
   plot_boxplot <- ggplot2::ggplot(
     data = data,
-    ggplot2::aes(x=var,y = .data[[var]])) +
-    ggplot2::geom_boxplot(fill = "#69782e", alpha=0.7) +
-    ggplot2::geom_jitter() +
+    ggplot2::aes(x = var,y = .data[[var]])) +
+    ggplot2::geom_violin(trim = F, color = "#292da3", fill = "#292da3", alpha=0.9) +
+    ggplot2::geom_boxplot(
+      width=.1,
+      fill = "white",
+      color = "black") +
+    ggplot2::geom_jitter(
+      shape = 16,
+      position = ggplot2::position_jitter(0.02),
+      color = "white",
+      alpha=0.5,
+      size = 2) +
     ggplot2::theme_minimal()
+
   # Stactic plot
   if(mode == "plot"){
     plot_hist <- plot_hist +
@@ -68,7 +78,7 @@ labsaf_eadplot <- function(data, var, fill = "#69782e", mode = "plot"){
             xref='paper',
             yref='paper')
           )
-        )
+        ) %>%  plotly::config(displayModeBar = F)
   }
   return(panel_plot)
 }
