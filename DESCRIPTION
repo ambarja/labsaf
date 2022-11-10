@@ -20,7 +20,8 @@ Imports:
   rlang,
   plotly,
   leaflet,
-  crayon
+  crayon,
+  glue
 Suggests:
     lifecycle,
     testthat (>= 3.0.0)

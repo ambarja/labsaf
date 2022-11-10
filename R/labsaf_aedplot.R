@@ -61,22 +61,25 @@ labsaf_eadplot <- function(data, var, fill = "#292da3", mode = "plot"){
     plot_boxplot <- plot_boxplot %>% plotly::ggplotly()
     panel_plot <- plotly::subplot(plot_hist, plot_boxplot) %>%
       plotly::layout(
+        title = "",
         annotations = list(
           list(
-            x = 0.2,
-            y = 1.05,
             text = sprintf("Histogram of %s",var),
+            x = 0,
+            y = 1.05,
+            showarrow = F,
+            xref='paper',
+            yref='paper',
+            align = "right"
+            ),
+          list(
+            text = sprintf("Violin plot of %s",var),
+            x = 1,
+            y = 1.05,
             showarrow = F,
             xref='paper',
             yref='paper'
-            ),
-          list(
-            x = 0.8,
-            y = 1.05,
-            text = sprintf("Violin plot of %s",var),
-            showarrow = F,
-            xref='paper',
-            yref='paper')
+            )
           )
         ) %>%  plotly::config(displayModeBar = F)
   }
